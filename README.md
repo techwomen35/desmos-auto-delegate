@@ -8,5 +8,14 @@ Instructions are following:
 git clone https://github.com/techwomen35/desmos-auto-delegate.git
 cd desmos-auto-delegate
 chmod +x delegate.sh
-./delegate.sh
+
+crontab -e
 ```
+
+crontab should be the following:
+
+```
+0 */3 * * * /delegate.sh
+```
+
+this crontab code provides to run the delegate.sh for every 3 hours
